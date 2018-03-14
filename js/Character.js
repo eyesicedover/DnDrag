@@ -7,7 +7,9 @@ export class Character {
     this.hp = 0;
     this.ac = 0;
     this.xp = 0;
+    this.lvl = 1;
     this.inventory = [];
+    this.action = "";
   }
 
   setName(newName) {
