@@ -1,13 +1,10 @@
 import { Character } from './../js/character.js';
-import { Item } from './../js/item.js';
-
 
 describe ("Character", function () {
 
   it("will validate that a new instance of character has correct values", function() {
     //Arrange, Act
     let newCharacter = new Character();
-
 
     //Assert
     expect(newCharacter.fierce).toEqual(0);
@@ -42,7 +39,7 @@ describe ("Character", function () {
     expect(newCharacter.shade).toEqual(2);
     expect(newCharacter.style).toEqual(4);
     expect(newCharacter.hp).toEqual(8);
-    expect(newCharacter.ac).toEqual(4);
+    expect(newCharacter.ac).toEqual(12);
   })
 
   it("will validate that Cheescake character has correct values when initialized", function() {
@@ -74,81 +71,4 @@ describe ("Character", function () {
     expect(newCharacter.hp).toEqual(4);
     expect(newCharacter.ac).toEqual(8);
   })
-});
-
-describe ("Item", function () {
-  it("will validate that a new instance of item", function() {
-    //Arrange, Act
-    let newItem = new Item();
-
-    //Assert
-    expect(newItem.name).toEqual("");
-    expect(newItem.type).toEqual("");
-    expect(newItem.value).toEqual(0);
-  })
-
-  it("will validate that a new instance makeup item has correct values", function() {
-    //Arrange
-    let newItemMakeup = new Item();
-
-    //Act
-    newItemMakeup.makeup();
-
-    //Assert
-    expect(newItem.name).toEqual("makeup");
-    expect(newItem.type).toEqual("fierce");
-    expect(newItem.value).toEqual(2);
-  }
-
-  it("will validate that a new instance ductTape item has correct values", function() {
-    //Arrange
-    let newItemDuctTape = new Item();
-
-    //Act
-    newItemDuctTape.ductTape();
-
-    //Assert
-    expect(newItem.name).toEqual("duct tape");
-    expect(newItem.type).toEqual("fierce");
-    expect(newItem.value).toEqual(1);
-  }
-
-  it("will validate that a new instance heels item has correct values", function() {
-    //Arrange
-    let newItemHeels = new Item();
-
-    //Act
-    newItemHeels.heels();
-
-    //Assert
-    expect(newItem.name).toEqual("heels");
-    expect(newItem.type).toEqual("fierce");
-    expect(newItem.value).toEqual(1);
-  }
-
-  it("will validate that a new instance sunglasses item has correct values", function() {
-    //Arrange
-    let newItemSunglasses = new Item();
-
-    //Act
-    newItemSunglasses.sunglasses();
-
-    //Assert
-    expect(newItem.name).toEqual("sunglasses");
-    expect(newItem.type).toEqual("shade");
-    expect(newItem.value).toEqual(1);
-  }
-
-  it("will validate that a new instance alcohol item has correct values", function() {
-    //Arrange
-    let newItemAlcohol = new Item();
-
-    //Act
-    newItemAlcohol.sunglasses();
-
-    //Assert
-    expect(newItem.name).toEqual("alcohol");
-    expect(newItem.type).toEqual("shade");
-    expect(newItem.value).toEqual(2);
-  }
 });

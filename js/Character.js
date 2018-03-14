@@ -19,7 +19,7 @@ export class Character {
     this.shade = 2;
     this.style = 4;
     this.hp = 8;
-    this.ac = 4;
+    this.ac = 12;
   }
 
   createCheesecake() {
@@ -37,7 +37,4 @@ export class Character {
     this.hp = 4;
     this.ac = 8;
   }
-
-
-
 }
