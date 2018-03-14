@@ -6,7 +6,9 @@ describe ("Item", function () {
     let newItem = new Item();
 
     //Assert
-    expect(newItem.stats).toEqual([]);
+    expect(newItem.name).toEqual("");
+    expect(newItem.type).toEqual("");
+    expect(newItem.value).toEqual(0);
   })
 
   it("will validate that a new instance sunglasses item has correct values", function() {
@@ -17,6 +19,8 @@ describe ("Item", function () {
     newItemSunglasses.sunglasses();
 
     //Assert
-    expect(newItem.stats).toEqual(["sunglasses", "shade", 2]);
+    expect(newItem.name).toEqual("sunglasses");
+    expect(newItem.type).toEqual("shade");
+    expect(newItem.value).toEqual(2);
   }
 });

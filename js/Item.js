@@ -1,9 +1,17 @@
 export class Item {
   constructor() {
-    this.stats = [];
+    this.name = "";
+    this.type = "";
+    this.value = 0;
   }
 
   sunglasses() {
-    this.stats = ["sunglasses", "shade", 2];
+    this.name = "sunglasses";
+    this.type = "shade";
+    this.value = 2;
   }
+
+  // alcohol() {
+  //
+  // }
 }
