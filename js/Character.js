@@ -1,5 +1,6 @@
 export class Character {
   constructor() {
+    this.name = "";
     this.fierce = 0;
     this.shade = 0;
     this.style = 0;
@@ -7,6 +8,10 @@ export class Character {
     this.ac = 0;
     this.xp = 0;
     this.inventory = [];
+  }
+
+  setName(newName) {
+    this.name = newName;
   }
 
   createGlamazon() {
