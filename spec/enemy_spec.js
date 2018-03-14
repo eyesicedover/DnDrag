@@ -38,10 +38,10 @@ describe ("Enemy", function () {
 
     //Assert
     expect(newEnemy.name).toEqual("Goblin");
-    expect(newEnemy.hp).toEqual(4);
-    expect(newEnemy.ac).toEqual(0);
-    expect(newEnemy.xp).toEqual(18);
-    expect(newEnemy.attack).toEqual(0);
+    expect(newEnemy.hp).toEqual(14);
+    expect(newEnemy.ac).toEqual(11);
+    expect(newEnemy.xp).toEqual(15);
+    expect(newEnemy.attack).toEqual(3);
   })
 
   it("will validate that a new instance of Zombie has correct values", function() {
@@ -53,10 +53,10 @@ describe ("Enemy", function () {
 
     //Assert
     expect(newEnemy.name).toEqual("Zombie");
-    expect(newEnemy.hp).toEqual(6);
-    expect(newEnemy.ac).toEqual(0);
+    expect(newEnemy.hp).toEqual(18);
+    expect(newEnemy.ac).toEqual(13);
     expect(newEnemy.xp).toEqual(25);
-    expect(newEnemy.attack).toEqual(0);
+    expect(newEnemy.attack).toEqual(4);
   })
 
   it("will validate that a new instance of Giant Spider has correct values", function() {
@@ -68,10 +68,10 @@ describe ("Enemy", function () {
 
     //Assert
     expect(newEnemy.name).toEqual("Giant Spider");
-    expect(newEnemy.hp).toEqual(8);
-    expect(newEnemy.ac).toEqual(0);
-    expect(newEnemy.xp).toEqual(0);
-    expect(newEnemy.attack).toEqual(0);
+    expect(newEnemy.hp).toEqual(20);
+    expect(newEnemy.ac).toEqual(14);
+    expect(newEnemy.xp).toEqual(35);
+    expect(newEnemy.attack).toEqual(5);
   })
 
   it("will validate that a new instance of Necromancer has correct values", function() {
@@ -83,9 +83,9 @@ describe ("Enemy", function () {
 
     //Assert
     expect(newEnemy.name).toEqual("Necromancer");
-    expect(newEnemy.hp).toEqual(10);
-    expect(newEnemy.ac).toEqual(0);
-    expect(newEnemy.xp).toEqual(0);
-    expect(newEnemy.attack).toEqual(0);
+    expect(newEnemy.hp).toEqual(20);
+    expect(newEnemy.ac).toEqual(16);
+    expect(newEnemy.xp).toEqual(45);
+    expect(newEnemy.attack).toEqual(6);
   })
 });
