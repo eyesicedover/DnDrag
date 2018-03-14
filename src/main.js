@@ -1,5 +1,6 @@
-// import { Sudoku } from './../js/sudoku';
+import { Character } from './../js/character';
 import './styles.css';
-//
-// $(document).ready(function() {
-// }
+
+$(document).ready(function() {
+  let newCharacter = new Character();
+});
