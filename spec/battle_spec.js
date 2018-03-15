@@ -37,7 +37,7 @@ describe ("Battle", function () {
     let winner = newBattle.determineWinner();
 
     expect(winner).toEqual("Honey, you SLAYED your enemy!");
-    expect(newBattle.player.xp).toEqual(5);
+    expect(newBattle.player.xp).toEqual(10);
   })
 
   it("will determine an item drop after battle", function() {
