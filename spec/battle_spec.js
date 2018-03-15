@@ -55,7 +55,7 @@ describe ("Battle", function () {
     let resultItem = newBattle.itemDrop();
 
     //Assert
-    expect(typeof testItem.value).toEqual(typeof resultItem.name);
+    expect(typeof testItem.name).toEqual(typeof resultItem.name);
   })
 
 })
