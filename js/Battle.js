@@ -7,6 +7,7 @@ export class Battle {
     this.playerSuccess = false;
     this.enemySuccess = false;
     this.playerWin = 0;
+    this.item;
   }
 
   battle() {
@@ -72,9 +73,18 @@ export class Battle {
       } else if ((roll > 12) && roll <= 15) {
         newItem.alcohol();
       } else {
-        return newItem;
+        this.item = newItem;
       }
-      return newItem;
+      this.item = newItem;
+    }
+  }
+
+  itemPickup(playerChoice) {
+    if (playerChoice == false) {
+      return this.player;
+    } else if (playerChoice == true) {
+      this.player.inventory.push(this.item);
+      return this.player;
     }
   }
 }

@@ -52,10 +52,30 @@ describe ("Battle", function () {
     let testItem = new Item();
 
     //Act
-    let resultItem = newBattle.itemDrop();
+    newBattle.itemDrop();
 
     //Assert
-    expect(typeof testItem.name).toEqual(typeof resultItem.name);
+    expect(typeof testItem.name).toEqual(typeof newBattle.item.name);
+  })
+
+  it("will determine if an item is picked up after battle", function() {
+    //Arrange
+    let newPlayer = new Character();
+    newPlayer.createGlamazon();
+    let newEnemy = new Enemy();
+    newEnemy.createImp();
+    newPlayer.action = "slay";
+    let newBattle = new Battle(newPlayer, newEnemy);
+    newBattle.enemy.hp = 0;
+    newBattle.determineWinner();
+    let testItem = new Item();
+    newBattle.itemDrop();
+
+    //Act
+    newPlayer = newBattle.itemPickup(true);
+
+    //Assert
+    expect(newPlayer.inventory.length).toEqual(0);
   })
 
 })
