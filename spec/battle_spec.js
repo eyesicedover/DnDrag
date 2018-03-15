@@ -24,4 +24,18 @@ describe ("Battle", function () {
     expect(number).toBeLessThan(21);
   })
 
+  it("will determine winner in battle", function() {
+    let newPlayer = new Character();
+    newPlayer.createGlamazon();
+    let newEnemy = new Enemy();
+    newEnemy.createImp();
+    newPlayer.action = "slay";
+    let newBattle = new Battle(newPlayer, newEnemy);
+    newBattle.player.hp = 0;
+
+    let winner = newBattle.determineWinner();
+
+    expect(winner).toEqual("You lost.... sashay away.");
+  })
+
 })

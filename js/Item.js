@@ -34,6 +34,4 @@ export class Item {
     this.type = "shade";
     this.value = 2;
   }
-
-
 }

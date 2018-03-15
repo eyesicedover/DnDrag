@@ -1,5 +1,4 @@
-import { Character } from './../js/character.js';
-import { Enemy } from './../js/enemy.js';
+import { Item } from './../js/item.js';
 
 export class Battle {
   constructor(player, enemy) {
@@ -7,6 +6,7 @@ export class Battle {
     this.enemy = enemy;
     this.playerSuccess = false;
     this.enemySuccess = false;
+    this.playerWin = 0;
   }
 
   battle() {
@@ -40,5 +40,41 @@ export class Battle {
   roll() {
     let number = Math.floor(Math.random() * Math.floor(20)) + 1;
     return number;
+  }
+
+  determineWinner() {
+    let text = "";
+    if(this.player.hp <= 0) {
+      this.playerWin = 1;
+    } else if (this.enemy.hp <= 0) {
+      this.playerWin = 2;
+    }
+    if(this.playerWin == 2) {
+      text = "Honey, you SLAYED your enemy!";
+    } else if (this.playerWin == 1) {
+      text = "You lost.... sashay away.";
+    }
+    return text;
+  }
+
+  itemDrop() {
+    let roll = this.roll();
+    let newItem = new Item();
+    if (this.playerWin == 2) {
+      if (roll <= 3) {
+        newItem.makeup();
+      } else if ((roll > 3) && roll <= 6) {
+        newItem.ductTape();
+      } else if ((roll > 6) && roll <= 9) {
+        newItem.heels();
+      } else if ((roll > 9) && roll <= 12) {
+        newItem.sunglasses();
+      } else if ((roll > 12) && roll <= 15) {
+        newItem.alcohol();
+      } else {
+        return newItem;
+      }
+      return newItem;
+    }
   }
 }
