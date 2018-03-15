@@ -94,8 +94,8 @@ describe ("Battle", function () {
     //Act
     newBattle.lvlUp();
     //Assert
-    expect(newBattle.player.lvl).toEqual(5);
-    expect(newBattle.player.fierce).toEqual(12);
+    expect(newBattle.player.lvl).toEqual(2);
+    expect(newBattle.player.fierce).toEqual(9);
   })
 
 })
