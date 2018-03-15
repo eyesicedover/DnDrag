@@ -75,7 +75,7 @@ describe ("Battle", function () {
     newPlayer = newBattle.itemPickup(true);
 
     //Assert
-    expect(newPlayer.inventory.length).toEqual(0);
+    expect(newPlayer.inventory.length).toEqual(1);
   })
 
 })
