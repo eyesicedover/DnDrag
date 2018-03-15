@@ -1,6 +1,18 @@
 body {
   background-color: grey;
+  color: #D3326D;
+  background-color: #7B435B;
+  font-family: 'Raleway', sans-serif;
 }
+
+.jumbotron {
+  background-color: #9CEAEF;
+  font-family: 'Courgette', cursive;
+}
+h1 {
+  text-shadow: 0 0 10px #D3326D, 0 0 10px #D3326D;
+}
+
 .classDescriptions, .game {
   display: none;
 }

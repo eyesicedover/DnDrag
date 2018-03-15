@@ -1,7 +1,6 @@
 export class Enemy {
   constructor() {
     this.name = "";
-    this.type = "";
     this.hp = 0;
     this.ac = 0;
     this.xp = 0;

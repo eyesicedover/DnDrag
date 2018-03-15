@@ -3,6 +3,7 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Raleway" rel="stylesheet">
     <meta charset="utf-8">
     <title>Dungeons And Drag</title>
   </head>
@@ -44,7 +45,46 @@
       <div class="well game">
         <p><span class="insertNameHere"></span>, you are a mighty <span class="insertTypeHere"></span> queen, and you have gone deep into a dark dungeon in search of a talisman of great power: A pair of authentic Jimmy Choo shoes. You must find them and rub them in the faces of all the other Queens! You gotta leave those clowns gagging!</p>
 
-        <p>After walking down a cold, stone passage you round the corner to find a frightening <span class="insertEnemyHere"></span>!</p>
+        <p>After walking down a cold, stone passage you round the corner to find a frightening <b><span class="insertEnemyHere"></span></b> threatening your weave!</p>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <p><u>Your stats:</u></p>
+            <p id="health"></p>
+            <p id="armor"></p>
+            <p id="fierce"></p>
+            <p id="shade"></p>
+            <p id="style"></p>
+          </div>
+          <div class="col-sm-6">
+            <p><u>Enemy stats:</u></p>
+            <p id="enemyHealth"></p>
+            <p id="enemyArmor"></p>
+            <p id="enemyAttack"></p>
+          </div>
+
+        </div>
+        <hr>
+        <h3>What would you like to do?</h3>
+        <form class="act form-group" action="index.html">
+          <label>
+            <input class="radio" type="radio" name="action" value="slay" checked>
+            Slay (physical attack)
+          </label>
+          <br>
+          <label>
+            <input class="radio" type="radio" name="action" value="tea">
+            Tea (magical attack)
+          </label>
+          <br>
+          <label>
+            <input class="radio" type="radio" name="action" value="werk">
+            Werk (heal ability)
+          </label>
+          <br>
+          <button class="btn btn-danger" type="submit" name="act">Act</button>
+        </form>
+      <hr>
       </div>
     </div>
   </body>
