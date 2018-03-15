@@ -6,6 +6,11 @@ import './styles.css';
 
 $(document).ready(function() {
   let newCharacter = new Character();
+
+  $("button#toggleClass").click(function() {
+    $(".classDescriptions").toggle();
+  });
+
   $(".createQueen").submit(function(event) {
     event.preventDefault();
     let name = $("input#dragName").val();
@@ -19,5 +24,11 @@ $(document).ready(function() {
     } else {
       newCharacter.createHeather();
     }
+    $(".insertNameHere").text(newCharacter.name);
+    $(".insertTypeHere").text(newCharacter.type);
+    $(".creation").fadeOut();
+    $(".game").fadeIn(3000);
   });
+
+
 });

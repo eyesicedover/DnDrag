@@ -1,6 +1,7 @@
 export class Enemy {
   constructor() {
     this.name = "";
+    this.type = "";
     this.hp = 0;
     this.ac = 0;
     this.xp = 0;
@@ -45,5 +46,26 @@ export class Enemy {
     this.ac = 16;
     this.xp = 45;
     this.attack = 6;
+  }
+
+  determineEnemy(playerlvl) {
+    let roll = Math.floor(Math.random() * Math.floor(20)) + 1;
+    let newEnemy = new Enemy();
+    if (playerlvl == 1) {
+      if (roll <= 10) {
+        newEnemy.createImp();
+      } else if (roll > 10) {
+        newEnemy.createGoblin();
+      }
+    } else if (playerlvl >= 2 && playerlvl <= 4) {
+      if (roll <= 10) {
+        newEnemy.createZombie();
+      } else if (roll > 10) {
+        newEnemy.createGiantSpider();
+      }
+    } else if (playerlvl == 5) {
+      newEnemy.createNecromancer();
+    }
+    return newEnemy;
   }
 }

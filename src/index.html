@@ -11,39 +11,41 @@
       <h1>Dungeons and Drag Queens</h1>
     </div>
     <div class="container text-center">
-      <div class="well">
-        <h3>CHOOSE YOUR DRAG QUEEN</h3>
-        <form class=" createQueen form-group" action="index.html">
-          <label for="dragName">Name! your! Queeeeeeeeeen!</label>
-          <input type="text" id="dragName" name="dragName" class="form-control">
+      <div class="well creation">
+        <h2>CHOOSE YOUR DRAG QUEEN</h2>
+        <form class="createQueen form-group" action="index.html">
           <br>
-          <div class="radio">
+          <input type="text" id="dragName" name="dragName" class="form-control" placeholder="Name! your! Queeeeeeeeeen!">
+          <br>
             <h4>Choose your Drag Queen class!</h4>
-            <p>Description:</p>
-            <p>Glamazon: You're a force of nature and you're fiercer than any gal on the catwalk. As a result, your Fierce skill is high and you do the most physical damage when you "slay". You have a decent Style, meaning you can do a decent job when you "werk" to recover. Sadly, you ain't a shady gal, and you won't be as proficient spilling "tea".</p>
-            <p>Cheesecake: You are the curviest, baddest queen on the runway. You sissy that walk and "werk" it harder than the other Queens, as a result you can recover and outlast your competition. You aren't afraid to throw shade to let the other girls know, but you struggle with slaying as hard as the other classes.</p>
-            <p>Heather: You are the first to throw shade and "clock" a Queen. You "werk" it on the runway, but you just aren't fierce. BYEEEE!</p>
-              <input type="radio" name="dragClass" value="glamazon" checked>
+            <button id="toggleClass" type="button" name="button">Toggle Show Class Descriptions</button>
+            <div class="classDescriptions">
+              <p><b><u>Glamazon:</u></b> You're a force of nature and you're fiercer than any gal on the catwalk. As a result, your Fierce skill is high and you do the most physical damage when you "slay". You have a decent Style, meaning you can do a decent job when you "werk" to recover. Sadly, you ain't a shady gal, and you won't be as proficient spilling "tea".</p>
+              <p><b><u>Cheesecake:</u></b> You are the curviest, baddest queen on the runway. You sissy that walk and "werk" it harder than the other Queens, as a result you can recover and outlast your competition. You aren't afraid to throw shade to let the other girls know, but you struggle with slaying as hard as the other classes.</p>
+              <p><b><u>Heather:</u></b> You are the first to throw shade and "clock" a Queen better than antone else. You "werk" it on the runway, but you just aren't fierce. BYEEEE!</p>
+            </div>
+            <hr>
+            <label>
+              <input class="radio-inline" type="radio" name="dragClass" value="glamazon" checked>
               Glamazon
             </label>
-          </div>
-          <div class="radio">
             <label>
-              <input type="radio" name="dragClass" value="cheesecake">
+              <input class="radio-inline" type="radio" name="dragClass" value="cheesecake">
               Cheesecake
             </label>
-          </div>
-          <div class="radio">
             <label>
-              <input type="radio" name="dragClass" value="heather">
+              <input class="radio-inline" type="radio" name="dragClass" value="heather">
               Heather
             </label>
-          </div>
-          <br>
+          <hr>
           <button type="submit" class="btn btn-danger">Get Slayin'!</button>
         </form>
       </div>
+      <div class="well game">
+        <p><span class="insertNameHere"></span>, you are a mighty <span class="insertTypeHere"></span> queen, and you have gone deep into a dark dungeon in search of a talisman of great power: A pair of authentic Jimmy Choo shoes. You must find them and rub them in the faces of all the other Queens! You gotta leave those clowns gagging!</p>
 
+        <p>After walking down a cold, stone passage you round the corner to find a frightening <span class="insertEnemyHere"></span>!</p>
+      </div>
     </div>
   </body>
 </html>

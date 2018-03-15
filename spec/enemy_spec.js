@@ -88,4 +88,16 @@ describe ("Enemy", function () {
     expect(newEnemy.xp).toEqual(45);
     expect(newEnemy.attack).toEqual(6);
   })
+
+  it("will determine the enemy based on a players level", function() {
+    //Arrange
+    let newEnemy = new Enemy();
+
+    //Act
+    newEnemy = newEnemy.determineEnemy(4);
+
+    //Assert
+    expect(newEnemy.name).toEqual("Necromancer");
+
+  })
 });
