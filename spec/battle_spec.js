@@ -79,4 +79,23 @@ describe ("Battle", function () {
     expect(newPlayer.inventory.length).toEqual(1);
   })
 
+  it("will test for the player leveling up", function() {
+    //Arrange
+    let newPlayer = new Character();
+    newPlayer.createGlamazon();
+    let newEnemy = new Enemy();
+    newEnemy.createImp();
+    newPlayer.action = "slay";
+    let newBattle = new Battle(newPlayer, newEnemy);
+    newBattle.enemy.hp = 0;
+    newBattle.determineWinner();
+    newBattle.player.xp = 25;
+
+    //Act
+    newBattle.lvlUp();
+    //Assert
+    expect(newBattle.player.lvl).toEqual(5);
+    expect(newBattle.player.fierce).toEqual(12);
+  })
+
 })

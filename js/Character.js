@@ -1,6 +1,7 @@
 export class Character {
   constructor() {
     this.name = "";
+    this.type = "";
     this.fierce = 0;
     this.shade = 0;
     this.style = 0;
@@ -17,6 +18,7 @@ export class Character {
   }
 
   createGlamazon() {
+    this.type = "glamazon";
     this.fierce = 6;
     this.shade = 2;
     this.style = 4;
@@ -25,6 +27,7 @@ export class Character {
   }
 
   createCheesecake() {
+    this.type = "cheesecake";
     this.fierce = 2;
     this.shade = 4;
     this.style = 6;
@@ -33,6 +36,7 @@ export class Character {
   }
 
   createHeather() {
+    this.type = "heather";
     this.fierce = 2;
     this.shade = 6;
     this.style = 4;

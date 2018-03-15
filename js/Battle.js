@@ -88,4 +88,49 @@ export class Battle {
       return this.player;
     }
   }
+
+  lvlUp() {
+    if (this.playerWin == 2 && this.player.xp >= 25 ) {
+      this.player.lvl = 2;
+      this.checkPlayerTypeForLvlUp();
+    } else if (this.playerWin == 2 && this.player.xp >= 75) {
+      this.player.lvl = 3;
+      this.checkPlayerTypeForLvlUp();
+    } else if (this.playerWin == 2 && this.player.xp >= 150) {
+      this.player.lvl = 4;
+      this.checkPlayerTypeForLvlUp();
+    } else if (this.playerWin == 2 && this.player.xp >= 250) {
+      this.player.lvl = 5;
+      this.checkPlayerTypeForLvlUp();
+    }
+  }
+
+  checkPlayerTypeForLvlUp() {
+    if (this.player.type == "glamazon") {
+      this.glamazonLvlUp();
+    } else if (this.player.type == "cheesecake") {
+      this.cheesecakeLvlUp();
+    } else {
+      this.heatherLvlUp();
+    }
+  }
+
+  glamazonLvlUp() {
+    this.player.fierce += 3;
+    this.player.style += 2;
+    this.player.shade += 1;
+  }
+
+  cheesecakeLvlUp() {
+    this.player.style += 3;
+    this.player.shade += 2;
+    this.player.fierce += 1;
+  }
+
+  heatherLvlUp() {
+    this.player.shade += 3;
+    this.player.style += 2;
+    this.player.fierce += 1;
+  }
+
 }
