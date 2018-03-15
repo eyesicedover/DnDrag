@@ -94,7 +94,7 @@ describe ("Enemy", function () {
     let newEnemy = new Enemy();
 
     //Act
-    newEnemy = newEnemy.determineEnemy(4);
+    newEnemy = newEnemy.determineEnemy(5);
 
     //Assert
     expect(newEnemy.name).toEqual("Necromancer");
