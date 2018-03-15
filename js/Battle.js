@@ -52,6 +52,7 @@ export class Battle {
     }
     if(this.playerWin == 2) {
       text = "Honey, you SLAYED your enemy!";
+      this.player.xp += this.enemy.xp;
     } else if (this.playerWin == 1) {
       text = "You lost.... sashay away.";
     }

@@ -25,18 +25,19 @@ describe ("Battle", function () {
     expect(number).toBeLessThan(21);
   })
 
-  it("will determine winner in battle", function() {
+  it("will determine winner in battle and add xp to player based on enemy", function() {
     let newPlayer = new Character();
     newPlayer.createGlamazon();
     let newEnemy = new Enemy();
     newEnemy.createImp();
     newPlayer.action = "slay";
     let newBattle = new Battle(newPlayer, newEnemy);
-    newBattle.player.hp = 0;
+    newBattle.enemy.hp = 0;
 
     let winner = newBattle.determineWinner();
 
-    expect(winner).toEqual("You lost.... sashay away.");
+    expect(winner).toEqual("Honey, you SLAYED your enemy!");
+    expect(newBattle.player.xp).toEqual(5);
   })
 
   it("will determine an item drop after battle", function() {
